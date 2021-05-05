@@ -1,0 +1,252 @@
+{% load static %}
+
+<div class="about-area section-padding bg-white">
+    <div class="container-xl">
+        <div class="row row-cards">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="contents">
+                            <h2 class="head-title">Collected Information</h2>
+                            Analyzed phone number : {{ mobile_number }}
+
+                        </div>
+                    </div>
+                    {% if details.sim_details.phone_number %}
+                        <div class="card-body">
+                            <div class="row">
+                                {% if details.sim_details.phone_number %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+
+                                                    <label class="form-label">Searched Phone Number</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.phone_number }}"
+                                                           value="0{{ details.sim_details.phone_number }}"
+                                                           disabled="">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.name %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+
+                                                    <label class="form-label">Sim Holder Name</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.name }}"
+                                                           value="{{ details.sim_details.name }}"
+                                                           disabled="">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.cnic %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Sim Holder CNIC Number</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.cnic }}"
+                                                           value="{{ details.sim_details.cnic }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.first_name %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">First Name</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.first_name }}"
+                                                           value="{{ details.sim_details.first_name }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.last_name %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.last_name }}"
+                                                           value="{{ details.sim_details.last_name }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.date %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Sim Registration Date</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.date }}"
+                                                           value="{{ details.sim_details.date }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.address %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Sim Holder Address</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.address }}"
+                                                           value="{{ details.sim_details.address }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.address1 %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Address Line One</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.address1 }}"
+                                                           value="{{ details.sim_details.address1 }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.address2 %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Address Line Two</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.address2 }}"
+                                                           value="{{ details.sim_details.address2 }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.city %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">City</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.city }}"
+                                                           value="{{ details.sim_details.city }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.sim_details.other_phone %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Other Linked Contant Numbers</label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="0{{ details.sim_details.other_phone }}"
+                                                           value="{{ details.sim_details.other_phone }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        </div>
+                    {% endif %}
+                {% if details.network_details.city %}
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                {% if details.network_details.city %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+
+                                                    <label class="form-label">City Name based on SIM Code </label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="{{ details.network_details.city }}"
+                                                           value="{{ details.network_details.city }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.network_details.city %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+
+                                                    <label class="form-label">Network name based on SIM Code </label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="{{ details.network_details.network }}"
+                                                           value="{{ details.network_details.network }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if details.network_details.status %}
+                                    <div class="col-xl-4">
+                                        <div class="row">
+                                            <div class="col-md-6 col-xl-12">
+                                                <div class="mb-3">
+
+                                                    <label class="form-label">SIM Status </label>
+                                                    <input type="text" class="form-control"
+                                                           placeholder="{{ details.network_details.status }}"
+                                                           value="{{ details.network_details.status }}"
+                                                           disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

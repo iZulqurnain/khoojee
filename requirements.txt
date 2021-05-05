@@ -1,0 +1,10 @@
+Django~=3.2
+requests[security]
+bs4
+celery==4.2.0
+redis
+django-datatables-view
+dj-database-url
+python-dotenv
+django-heroku
+django-datatables-view

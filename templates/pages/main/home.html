@@ -1,0 +1,428 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Khoojee | Information gathering & OSINT reconnaissance</title>
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Icon -->
+    <link rel="stylesheet" href="{% static 'assets/css/line-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/LineIcons.css' %}">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nivo-lightbox.css' %}">
+    <!-- Animate -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+</head>
+<body class="theme-dark">
+
+<!-- Header Area wrapper Starts -->
+<header id="header-wrap">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="{% url 'home_page' %}" class="navbar-brand"><img src="{% static 'assets/img/logo.png' %}"
+                                                                      alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#hero-area">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#domain-recon">
+                            Domain Recon
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#phone-recon">
+                            Phone Number Recon
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#email-recon">
+                            Email Recon
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            Other Services
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#teams">
+                            About
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+</header>
+<!-- Hero Area Start -->
+<div id="hero-area" class="hero-area-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                <div class="contents">
+                    <h2 class="head-title">Information gathering & OSINT Reconnaissance Site</h2>
+                    <p>Khoojee is an open source intelligence (OSINT) automation site. It integrates with just
+                        about every data source available and utilises a range of methods for data analysis,
+                        making that data easy to navigate</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                <div class="intro-img">
+                    <img class="img-fluid" src="{% static 'assets/img/cyber.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End -->
+
+
+<div id="domain-recon" class="about-area section-padding bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-xs-12 info">
+                <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
+                    <div>
+                        <div class="site-heading">
+                            <p class="mb-3">Short Story</p>
+                            <h2 class="section-title">Domain and Network Recon</h2>
+                        </div>
+                        <div class="content">
+                            <p>
+                                A web service which provides a end user ability to retrieve information about IP number
+                                resources, organizations, and Points of Contact registered with ARIN. It scans for over
+                                46,953 different web technologies. Discover what tools a site uses such as shopping
+                                carts, hosting, analytics, and more.
+                            </p>
+                            <a href="{% url 'domain_page' %}" class="btn btn-common mt-3">Let's Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
+                <img class="img-fluid" src="{% static 'assets/img/analyze_data.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="phone-recon" class="about-area section-padding bg-gray">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
+                <img class="img-fluid" src="{% static 'assets/img/phone_no.png' %}" alt="">
+            </div>
+            <div class="col-lg-6 col-md-12 col-xs-12 info">
+                <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
+                    <div>
+                        <div class="site-heading">
+                            <p class="mb-3">Short Story</p>
+                            <h2 class="section-title">Phone Number Recon</h2>
+                        </div>
+                        <div class="content">
+                            <p>
+                                Khoojee is one of the most advanced tools to scan phone numbers using only free
+                                resources. The goal is to first gather standard information such as country, area,
+                                carrier and line type on any international phone numbers with a very good accuracy.
+                                Then search for footprints on search engines to try to find the VoIP provider
+                                or identify the owner. It also searched into hacked database.
+                            </p>
+                            <a href="{% url 'phone_page' %}" class="btn btn-common mt-3">Let's Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="email-recon" class="about-area section-padding bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-xs-12 info">
+                <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
+                    <div>
+                        <div class="site-heading">
+                            <p class="mb-3">Short Story</p>
+                            <h2 class="section-title">Email Recon
+                            </h2>
+                        </div>
+                        <div class="content">
+                            <p>
+                                Search public information available online related to your email address, connection.
+                                Get a summary of where your account got breached over the last years. Get a summary of
+                                where your account got. See if we find your info on the dark web and on online sources.
+                            </p>
+                            <a href="#" class="btn btn-common mt-3">Let's Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
+                <img class="img-fluid" src="{% static 'assets/img/email_1.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section Start -->
+<section id="services" class="section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Our Services</h2>
+            <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+        </div>
+        <div class="row">
+            <!-- Services item -->
+            <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
+                    <div class="icon">
+                        <i class="lni lni-delivery"></i>
+                    </div>
+                    <div class="services-content">
+                        <h3><a href="#">Courier Services</a></h3>
+                        <p>As Courier, We shows up in the main organizations.It is rendering administration of critical
+                            record conveyance all through Sweden. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Services item -->
+            <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="icon">
+                        <i class="lni-home"></i>
+                    </div>
+                    <div class="services-content">
+                        <h3><a href="#">Fulfillment Services</a></h3>
+                        <p>With AHJM eFulfillment, you can store your products in AHJM fulfillment, and let us Pick,
+                            Pack and Ship it to your customer’s doorsteps.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services item -->
+            <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
+                    <div class="icon">
+                        <i class="lni lni-caravan"></i>
+                    </div>
+                    <div class="services-content">
+                        <h3><a href="#">Cargo Services</a></h3>
+                        <p>AHJM rendering conveyance administration of overwhelming relegation on shabby rates when
+                            contrasted with dispatch charges.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Services item -->
+            <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
+                    <div class="icon">
+                        <i class="lni lni-gift"></i>
+                    </div>
+                    <div class="services-content">
+                        <h3><a href="#">Gift Wift</a></h3>
+                        <p> Giftwifts brings you a wide range of gifts available to be sent across the nation! Be it any
+                            corporate gifting event or private occasion. Send your family and friends </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Services item -->
+            <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
+                    <div class="icon">
+                        <i class="lni lni-wallet"></i>
+                    </div>
+                    <div class="services-content">
+                        <h3><a href="#">Cash On Delivery</a></h3>
+                        <p>AHJM Courier Services provides the best cash on delivery services to online businesses. Apply
+                            for a COD account today and use the best courier service in Sweden today! </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Services item -->
+            <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
+                    <div class="icon">
+                        <i class="lni lni-timer"></i>
+                    </div>
+                    <div class="services-content">
+                        <h3><a href="#">Overnight</a></h3>
+                        <p>AHJM Courier Services provides you Overnight shipping services. Book a shipment, and get it
+                            delivered by the next day! Use our Overnight Service for urgent deliveries. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Services item -->
+            <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
+                    <div class="icon">
+                        <i class="lni lni-weight"></i>
+                    </div>
+                    <div class="services-content">
+                        <h3><a href="#">Overland</a></h3>
+                        <p>AHJM Overland freight solutions! Transport your bulky and heavy shipments across the country
+                            with our safe, secure and reliable Overland Delivery service. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Services item -->
+            <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
+                    <div class="icon">
+                        <i class="lni lni-more"></i>
+                    </div>
+                    <div class="services-content">
+                        <h3><a href="#">More</a></h3>
+                        <p>Stay tuned with us we are working on more reliable services to offer .. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section End -->
+
+<!-- Footer Section Start -->
+<footer id="footer" class="footer-area section-padding">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+                    <div class="widget">
+                        <h3 class="footer-logo"><img src="{% static 'assets/img/logo.png' %}" alt=""></h3>
+                        <div class="textwidget">
+                            <p>Shipping with specialists in shipping and courier delivery services! With our wide range
+                                of express parcel and package services.</p>
+                        </div>
+                        <div class="social-icon">
+                            <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+                            <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+                            <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
+                            <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <h3 class="footer-titel">Products</h3>
+
+                    <ul class="footer-link">
+                        <li><a href="#">Tracking -
+                            <x style="color:#F63854">In Progress</x>
+                        </a></li>
+                        <li><a href="#">Application -
+                            <x style="color:#F63854">In Progress</x>
+                        </a></li>
+                        <li><a href="#">Resource Planning -
+                            <x style="color:#F63854">In Progress</x>
+                        </a></li>
+                        <li><a href="#">Enterprise -
+                            <x style="color:#F63854">In Progress</x>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <h3 class="footer-titel">Resources</h3>
+                    <ul class="footer-link">
+                        <li><a href="#">Payment Options -
+                            <x style="color:#F63854">In Progress</x>
+                        </a></li>
+                        <li><a href="#">Fee Schedule -
+                            <x style="color:#F63854">In Progress</x>
+                        </a></li>
+                        <li><a href="#">Getting Started -
+                            <x style="color:#F63854">In Progress</x>
+                        </a></li>
+                        <li><a href="#">Identity Verification -
+                            <x style="color:#F63854">In Progress</x>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <h3 class="footer-titel">Contact</h3>
+                    <ul class="address">
+                        <li>
+                            <a href="#"><i class="lni-map-marker"></i> Blåsvädersgatan 22, LGH-1303, <br> 418 32
+                                Göteborg</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="lni-phone-handset"></i> P: +46 734 959 398</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="lni-envelope"></i> E: haseeb@ahjm.se</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-content">
+                        <p>Copyright © 2021 <a rel="nofollow" href="http://ahjm.se/">AHJM</a> All Right Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Go to Top Link -->
+<a href="#" class="back-to-top">
+    <i class="lni-arrow-up"></i>
+</a>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="loader" id="loader-1"></div>
+</div>
+<!-- End Preloader -->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'assets/js/jquery-min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/wow.js' %}"></script>
+<script src="{% static 'assets/js/jquery.nav.js' %}"></script>
+<script src="{% static 'assets/js/scrolling-nav.js' %}"></script>
+<script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+</html>

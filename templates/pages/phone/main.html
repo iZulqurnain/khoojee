@@ -1,0 +1,152 @@
+{% extends "theme/layout.html" %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'assets/css/dataTables.bootstrap4.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/jquery.dataTables.min.css' %}">
+    {% if  has_error %}
+        <link rel="stylesheet" href="{% static 'assets/css/toastr.min.css' %}">
+
+    {% endif %}
+{% endblock %}
+{% block javascript %}
+    <script src="{% static 'assets/js/datatables/js/datatables/jquery.dataTables.js' %}"></script>
+    {% if  has_error %}
+        <script src="{% static 'assets/js/toastr.min.js' %}"></script>
+    {% endif %}
+    <script>
+        $(document).ready(function () {
+            var oTable = $('#recent_search').dataTable({
+                "bFilter": true,
+                "aLengthMenu": [[25, 50, 100, 200], [25, 50, 100, 200]],
+                "iDisplayLength": 25,
+                "aaSorting": [[0, "desc"]],
+                "bAutoWidth": true,
+                "aoColumns": [
+
+                    {
+                        "phone_number": "phone_number",
+                        "sClass": "left",
+                        "mRender": function (phone_number, type, row) {
+                            return '<a class="btn btn-primary disabled" ><i class="lni lni-phone">' +
+                                    '</i> 0' + phone_number+'</a>';
+
+                        }
+                    },
+                    {
+                        "details_found": "details_found",
+                        "sClass": "left",
+                        "mRender": function (data, type, row) {
+                            if (data === 'True') {
+                                return '<a class="btn btn-primary disabled" ><i class="lni lni-checkmark-circle"></i> Yes</a>';
+                            } else {
+                                return '<a class="btn btn-danger disabled" ><i class="lni  lni-cross-circle"></i> No</a>';
+                            }
+
+
+                        }
+                    },
+                    {
+                        "is_search_completed": "is_search_completed",
+                        "sClass": "left",
+                        "mRender": function (data, type, row) {
+                            if (data === 'True') {
+                                return '<a class="btn btn-primary disabled" ><i class="lni lni-checkmark-circle">' +
+                                    '</i> Completed</a>';
+                            } else {
+                                return '<a class="btn btn-success disabled" ><i class="lni lni-reload"></i> In Progress</a>';
+                            }
+
+
+                        }
+                    },{
+                        "is_search_completed": "is_search_completed",
+                        "sClass": "left",
+                        "mRender": function (data, type, row) {
+                            return '<a class="btn btn-success " >View Details <i class="lni-arrow-right-circle"></i></a>';
+
+
+                        }
+                    },
+                ],
+                "processing": true,
+                "serverSide": true,
+                "sAjaxSource": "{% url 'recent_record_list_json' %}"
+            });
+
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+
+    {% if has_error %}
+        <script>
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-bottom-full-width",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "400",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr.error("{{ error_message }}", {
+                "timeOut": "0",
+                "extendedTImeout": "0"
+            });
+        </script>
+    {% endif %}
+    <div class="about-area section-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-xs-12 info">
+                    <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
+                        <div>
+                            <div class="site-heading">
+                                <h2 class="section-title">Phone Number Info Search
+                                </h2>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    You can find details of Pakistani phone numbers till 2017. This data is publicly
+                                    available on different internet sources. Our tools scraps results from these sources
+                                    and generates report for you. <b>Liability lies on record searcher. This is a
+                                    research based tool for it's user.</b> We do not take any responsibility of it's
+                                    miss
+                                    use.
+                                </p>
+
+                                <b></b><br/>
+                                <form id="phone_search_request" action="{% url 'phone_page' %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="text" class="form-control ps-1" id="phone_number" name="phone_number"
+                                           placeholder="Enter full format phone number, e.g. 00923131234567"
+                                           autocomplete="off">
+                                    <input type="checkbox" id="is_allowed" name="is_allowed" value="True"
+                                           checked="checked">
+                                    <label for="is_allowed"> Allow public search listing</label><br>
+                                    <button href="#" type="submit" class="btn btn-common mt-3">
+                                        <i class="lni lni-search"></i> Search
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
+                    <img class="img-fluid" src="{% static 'assets/img/phone_number_search.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'pages/phone/response/public_search.html' %}
+{% endblock %}

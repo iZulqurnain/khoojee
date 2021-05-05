@@ -1,0 +1,11 @@
+{% extends "theme/layout.html" %}
+{% block content %}
+
+    {% if searching %}
+        {% include 'pages/phone/response/searching.html' %}
+        {% elif profile %}
+        {% include 'pages/phone/response/profile.html' %}
+    {% endif %}
+
+
+{% endblock %}

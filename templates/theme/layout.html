@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block pagetitle %} {% endblock %}</title>
+
+    {% include "theme/style.html" %}
+    {% block style %}
+
+    {% endblock %}
+{% include "theme/javasript.html" %}
+{% block javascript %}
+
+{% endblock %}
+</head>
+<body class="theme-dark">
+{% include "theme/navbar.html" %}
+<div  class="section-padding">
+    <div class="container">
+        {% block content %}
+
+
+        {% endblock %}
+    </div>
+</div>
+{% include "theme/footer.html" %}
+
+</body>
+</html>
