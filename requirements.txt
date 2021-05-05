@@ -1,10 +1,12 @@
 Django~=3.2
-requests[security]
-bs4
+requests[security]~=2.25.1
+bs4~=0.0.1
 celery==4.2.0
 redis
 django-datatables-view
 dj-database-url
-python-dotenv
+python-dotenv~=0.17.0
 django-heroku
 django-datatables-view
+beautifulsoup4~=4.9.3
+certifi~=2020.12.5

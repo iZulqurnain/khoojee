@@ -137,3 +137,7 @@ CELERY_TASK_SERIALIZER = 'json'
 ENVIRONMENT = os.environ['ENVIRONMENT']
 if 'ON_HEROKU' in ENVIRONMENT:
     django_heroku.settings(locals())
+
+DOMAIN_BIG_DATA =  os.environ['DOMAIN_BIG_DATA']
+SIM_DATA_BASE =  os.environ['SIM_DATA_BASE']
+CELL_SAA =  os.environ['CELL_SAA']

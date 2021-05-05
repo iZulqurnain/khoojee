@@ -2,16 +2,17 @@ import random
 import time
 from bs4 import BeautifulSoup
 import certifi
-import ssl
+
 import requests
 
-from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.poolmanager import PoolManager
+
+import khoojee
+from khoojee.settings import SIM_DATA_BASE
 
 
 class SimData:
     __MOBILE_NUMBER__ = None
-    __SERVER_ONE__ = "https://simdatabaseonline.com/tele/search-result.php"
+    __SERVER_ONE__ =SIM_DATA_BASE
 
     def __init__(self, mobile_number):
         self.__MOBILE_NUMBER__ = mobile_number

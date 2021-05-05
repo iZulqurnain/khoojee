@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+from khoojee.settings import CELL_SAA
+
 
 class SimLocation:
     __MOBILE_NUMBER__ = None
@@ -17,7 +19,7 @@ class SimLocation:
         try:
             headers = {'User-Agent': 'Mozilla/5.0'}
             payload = {'mobilenumber': self.__MOBILE_NUMBER__, 'submit': 'Search', 'submitse': 'Trace'}
-            response = requests.post(url="https://www.cellsaa.com/trace-mobile-number", headers=headers, data=payload)
+            response = requests.post(url=CELL_SAA, headers=headers, data=payload)
             soup = BeautifulSoup(response.content, 'html.parser')
             data = soup.find("div", {"class": "art-content"})
             rows = data.findAll("div", {"class": "Cell"})
